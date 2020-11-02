@@ -8,7 +8,10 @@ extern Spark::Application* Spark::CreateApplication();
 
 int main(int argc, char** argv)
 {
-	printf("Spark\n");
+	Spark::Log::Init();
+	SK_CORE_WARN("Initialized log");
+	SK_INFO("Initialized log");
+
 	auto app = Spark::CreateApplication();
 
 	app->run();
